@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+    // burda bulunan kodlarda ise AND , OR ,XOR kullanıcaz and ikisininde olumlu oldugu durumlarda 1 dir , 
+    // OR herhangi bir tanesinin dogru olması durumda 1 dir 
+    // XOR ise ikisin aynı anda dogru ve yanlış olmasını istemiyor sadece biri dogru olmalı 
+    // burada bulunan kodla da logic operatörlerle yani mantıksal operatörlerinde oldugu kod olucak 
+
+    char x, y, z;
+    int sonuc1, sonuc2, sonuc3;
+    int toplamdogrulukoranı;
+
+    printf("lütfen sırasıyla x,y,z nin degerini giriniz:\n");
+    scanf(" %c %c %c", &x, &y, &z);
+
+    // burda x in aldıgı deger hem 5 den büyük hemde 10 dan küçük olmasını istiyorum 
+    // "&&" operatörü ile ikisininde dogru oldugu konumlarda true döndür demek yani AND 
+    sonuc1 = (x > 5 && x < 10);
+
+    // burda da ise "||" işareti yani OR ikisinden biri dogruysa true yani 1 döndür demek 
+    sonuc2 = (x < 5 || x < 10);
+
+    // burda da ise sonucu tersine çevirir. 
+    // sonuç dogruysa yanlış döndürür yanlışsa da dogru dönderir 
+    // mesela burda hem 5 den büyük hemde 10 dan küçük sayılar dogrudur 
+    // ama "!" bu işaret sayesinde tersine döner 
+    sonuc3 = !(x > 5 && x < 10);
+
+    toplamdogrulukoranı = sonuc1 + sonuc2 + sonuc3;
+
+    printf("Toplam doğruluk oranı: %d\n", toplamdogrulukoranı);
+
+    return 0;
+}
