@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+// merhaba bu kod satırında fatura hesaplama kodu var bu kodda aynı zamanda çarpma bölme cıkarma toplamalarıda gördünüz
+// algoritma şuanki enflasyon oranına göre elektrik faturası hesaplama 
+// önce bu ay okuma ve önceki ayda okunan degeri cıkartıp harcamayı buluyoruz sonrasında enflasyon oranına göre abonelik ücretini
+//- hesaplayıp ve enlasyon oranına göre birim fiyatını bulup kişinin harcaması kadar yeni fiyatla hesaplanıyor 
+
+
+
+int main(){
+float odenecekfatura,eskibirimfiyat,yenibirimfiyat; 
+float enflasyon,eskiaboneücreti,yeniaboneücreti;
+int yeniokuma,eskiokuma,toplamharcananelektrik;
+
+printf("enflasyon oranını gırın:"); // burda kullanıcıdan enflasyon oranını yazmasını istiyorum
+scanf("%f", &enflasyon); // ve aldıgım degeri enflasyon adındaki veriablema ekliyorum 
+
+printf("oncekıayaaıtbırımmıktarınıgırın:"); // burda a oncekı aydan bırımın degerini istiyorum 
+scanf("%f", &eskibirimfiyat); // kullanıcıdan aldıgım degeri eskibirimfiyatı adındaki veriablema atıyorum 
+
+printf("oncekı aya aıt abonelik ücretini girin:"); // burdada aynı şekilde
+scanf("%f", &eskiaboneücreti); // burdada aldıgım degeri tanımlıyorum 
+
+printf("bir önceki aya ait okuma degerini girin:");// ......
+scanf("%d", &eskiokuma);// ....
+
+printf("bu aya aıt olan birim okuma degerini girin:");
+scanf("%d", &yeniokuma);
+
+toplamharcananelektrik=yeniokuma-eskiokuma;// toplam harcanan eektrik degerini bulmak içn yeni ve eski okuma degerini cıkarıyorum
+yenibirimfiyat=eskibirimfiyat*(1+enflasyon /100); // yenibirimfiyatınnıda eskibirimfiyatının enflasyon degeriyle olmasını hesaplı
+yeniaboneücreti=eskiaboneücreti*(1+enflasyon/100); // burdada aynı şekilde eski ücret enflasyonla hesaplanıp yeni fiyat cıkıyor 
+odenecekfatura=toplamharcananelektrik*yenibirimfiyat+yeniaboneücreti; 
+printf("\nodeyecegınız fatura tutarı budur:%f\n\n",odenecekfatura);
+
+
+
+
+return 0;
+}
