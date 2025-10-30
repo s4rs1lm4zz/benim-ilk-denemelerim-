@@ -3,22 +3,22 @@
 // FARKLI ÝLLERDEN GELEN üye ciftciler ilE toplNTI Yapýlýcak bu toplantýnýn katýlým sayýsýnýn saglanýp saglanamadýgýný kontrol eden program
 // burda ki kodda if,else koţullarý kullanarak program yaazýcaz
 
-int main()
+int main()  
 {
-int kayseri,sivas,kahramanmaraţ,mevcutciftci;
-const int toplamüye=400;
+int kayseri,sivas,kahramanmaraţ,mevcutciftci;// burda 4 adet veriable atıyorum 
+const int toplamüye=400; // const diyerek veriable sabit degiştirilemez yapıyorum 
 
 
-printf("lutfen 4 ilden gelen uye sayisini girin");
-scanf("%d%d%d%d" ,&kayseri,&sivas,&kahramanmaraţ);
+printf("lutfen 4 ilden gelen uye sayisini girin"); // 4 ilden sırasıyla katılımcı sayısı girilmesini kullanıcıdan istiyorum
+scanf("%d%d%d%d" ,&kayseri,&sivas,&kahramanmaraţ); // scanf ile verilen degeri sabitliyorum 
 
-mevcutciftci=kayseri+sivas+kahramanmaraţ;
-if(mevcutciftci<toplamüye/2){
-printf("gerekli toplam uye sayisi olmadigi icin toplantiya ara verildi ");
+mevcutciftci=kayseri+sivas+kahramanmaraţ; // mevcut ciftci bulmak için katılımcıların sayısını tutuyorum
+if(mevcutciftci<toplamüye/2){ // if yani eger diyorum mevcut ciftci sayısı toplam üyenin /2 yani yarısından küçükse diyorum ve {} bu işaretin içinde bunu çalıştırıtyorum
+printf("gerekli toplam uye sayisi olmadigi icin toplantiya ara verildi "); 
 printf("toplam gerekli uye sayisi %d` dur\n",toplamüye/2);
 
 }
-else {
+else { // burda da else yani ifin saglanmaması durumda bu satırdakileri çalıştır diyorum
     printf("toplanti ya haziriz \n");
 }
 
