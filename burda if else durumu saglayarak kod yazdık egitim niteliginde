@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+// FARKLI ÝLLERDEN GELEN üye ciftciler ilE toplNTI Yapýlýcak bu toplantýnýn katýlým sayýsýnýn saglanýp saglanamadýgýný kontrol eden program
+// burda ki kodda if,else koţullarý kullanarak program yaazýcaz
+
+int main()
+{
+int kayseri,sivas,kahramanmaraţ,mevcutciftci;
+const int toplamüye=400;
+
+
+printf("lutfen 4 ilden gelen uye sayisini girin");
+scanf("%d%d%d%d" ,&kayseri,&sivas,&kahramanmaraţ);
+
+mevcutciftci=kayseri+sivas+kahramanmaraţ;
+if(mevcutciftci<toplamüye/2){
+printf("gerekli toplam uye sayisi olmadigi icin toplantiya ara verildi ");
+printf("toplam gerekli uye sayisi %d` dur\n",toplamüye/2);
+
+}
+else {
+    printf("toplanti ya haziriz \n");
+}
+
+}
